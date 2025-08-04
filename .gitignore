@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Training outputs (except final results)
+*_training/training_*.log
+*_training/checkpoint_epoch_*.pth
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (keep structure but not individual images)
+dataset/*/*.jpg
+dataset/*/*.jpeg
+dataset/*/*.png
+dataset/*/*.bmp
+dataset/*/*.tiff
+
+# Keep dataset structure
+!dataset/*/
+!dataset/.gitkeep
