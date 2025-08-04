@@ -1,0 +1,20 @@
+Best Validation Accuracy: 93.3722%
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         dew       0.98      0.99      0.98       140
+     fogsmog       0.94      0.95      0.95       170
+       frost       0.82      0.91      0.86        95
+       glaze       0.89      0.81      0.85       128
+        hail       0.97      0.98      0.97       118
+   lightning       1.00      1.00      1.00        76
+        rain       0.98      0.91      0.95       105
+     rainbow       1.00      1.00      1.00        46
+        rime       0.88      0.91      0.89       232
+   sandstorm       0.95      0.96      0.96       139
+        snow       0.92      0.87      0.89       124
+
+    accuracy                           0.93      1373
+   macro avg       0.94      0.94      0.94      1373
+weighted avg       0.93      0.93      0.93      1373
