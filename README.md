@@ -73,6 +73,10 @@ python evaluate_pytorch.py rtx3090_training/best_model.pth --predict-dir /path/t
 - **Resolution**: 224x224 RGB
 - **Augmentation**: Random flips, rotations, color jitter
 
+**Source**: Weather Phenomenon Database (WEAPD) by Xiao, H. (2021)  
+**Original Dataset**: https://doi.org/10.7910/DVN/M8JQCR  
+**Available via**: https://www.kaggle.com/datasets/jehanbhathena/weather-dataset
+
 ### Weather Classes
 `dew`, `fogsmog`, `frost`, `glaze`, `hail`, `lightning`, `rain`, `rainbow`, `rime`, `sandstorm`, `snow`
 
@@ -201,4 +205,4 @@ This project is open source and available under the MIT License.
 
 - **EfficientNet**: Tan & Le, "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks"
 - **PyTorch Team**: For the excellent deep learning framework
-- **Weather Dataset**: Community-contributed weather image collection
+- **Weather Dataset**: Xiao, H. (2021). Weather phenomenon database (WEAPD). Harvard Dataverse. https://doi.org/10.7910/DVN/M8JQCR
