@@ -81,24 +81,24 @@ python evaluate_pytorch.py rtx3090_training/best_model.pth --predict-dir /path/t
 ### Supported Models
 
 #### EfficientNet Family (Full B0-B7 Support)
-| Model | Parameters | Best Use Case |
-|-------|------------|---------------|
-| EfficientNet B0 | 4.0M | Fast inference, mobile deployment |
-| EfficientNet B1 | 6.5M | Balanced speed/accuracy |
-| EfficientNet B2 | 7.7M | Good general purpose |
-| EfficientNet B3 | 10.7M | Higher accuracy needs |
-| **EfficientNet B4** | **17.6M** | **Production (our best)** |
-| EfficientNet B5 | 28.4M | Maximum accuracy |
-| EfficientNet B6 | 40.8M | Research/high-end |
-| EfficientNet B7 | 63.8M | Cutting-edge performance |
+| Model |
+|-------|
+| EfficientNet B0 |
+| EfficientNet B1 |
+| EfficientNet B2 |
+| EfficientNet B3 |
+| **EfficientNet B4** |
+| EfficientNet B5 |
+| EfficientNet B6 |
+| EfficientNet B7 |
 
 #### ResNet Family
-| Model | Parameters | 
-|-------|------------|
-| ResNet18 | 11.2M |
-| ResNet34 | 21.3M |
-| ResNet50 | 23.5M |
-| ResNet101 | 42.5M |
+| Model | 
+|-------|
+| ResNet18 |
+| ResNet34 |
+| ResNet50 |
+| ResNet101 |
 
 ## ⚡ RTX 3090 Optimizations
 
