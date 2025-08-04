@@ -27,7 +27,7 @@ class WeatherClassifierEvaluator:
         
         # Load checkpoint
         print(f"Loading model from {checkpoint_path}")
-        checkpoint = torch.load(checkpoint_path, map_location=self.device)
+        checkpoint = torch.load(checkpoint_path, map_location=self.device, weights_only=False)
         
         self.config = checkpoint['config']
         self.classes = checkpoint['classes']
@@ -41,8 +41,19 @@ class WeatherClassifierEvaluator:
             dropout_rate=self.config.dropout_rate
         ).to(self.device)
         
-        # Load model weights
-        self.model.load_state_dict(checkpoint['model_state_dict'])
+        # Load model weights (handle compiled models)
+        state_dict = checkpoint['model_state_dict']
+        
+        # Check if model was compiled (has _orig_mod prefix)
+        if any(key.startswith('_orig_mod.') for key in state_dict.keys()):
+            # Remove _orig_mod prefix from compiled model
+            new_state_dict = {}
+            for key, value in state_dict.items():
+                new_key = key.replace('_orig_mod.', '') if key.startswith('_orig_mod.') else key
+                new_state_dict[new_key] = value
+            state_dict = new_state_dict
+        
+        self.model.load_state_dict(state_dict)
         self.model.eval()
         
         # Setup transforms

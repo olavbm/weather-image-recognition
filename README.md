@@ -136,6 +136,29 @@ Our training pipeline includes several optimizations for RTX 3090:
 4. **RTX 3090 Optimizations** deliver 2x speedup without accuracy loss
 5. **Mixed Precision** training is stable and effective for this task
 
+
+## 🚨 Model Limitations
+
+### Real-World Testing
+While the model achieves 93.37% accuracy on the validation dataset, real-world performance reveals areas for improvement:
+
+**Test Case: Trondheim Summer Photo (`DSCF7424.JPG`)**
+- **Actual Weather**: Clear summer day in Trondheim, Norway
+- **Model Prediction**: `frost` (25.93% confidence)
+- **Issue**: The model misclassified a clear summer scene as frost
+
+**Key Insights:**
+1. **Domain Gap**: Training data may not represent diverse geographic locations
+2. **Context Understanding**: Model focuses on low-level features rather than contextual clues
+3. **Dataset Bias**: Possible over-representation of certain visual patterns in frost class
+4. **Confidence Calibration**: Low confidence (25.93%) suggests model uncertainty
+
+**Future Improvements:**
+- Expand training data with more diverse geographic locations
+- Add more clear/sunny weather samples to reduce classification bias
+- Implement ensemble methods for better confidence estimation
+- Consider multi-modal approaches incorporating metadata (location, season, time)
+
 ## 🛠️ Technical Architecture
 
 ### Core Components
